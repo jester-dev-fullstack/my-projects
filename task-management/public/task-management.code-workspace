@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../php_tuts/php-template"
+		}
+	],
+    "settings": {
+        "editor.formatOnSave": true
+    }
+}

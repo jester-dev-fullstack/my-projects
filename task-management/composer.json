@@ -1,0 +1,16 @@
+{
+    "name": "mac/task-management",
+    "description": "This is a task management app",
+    "authors": [
+        {
+            "name": "Jerome Guya"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}

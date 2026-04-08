@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100%;
+}
+
+.login {
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #a855f7 50%, #ec4899 100%);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.login_container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    padding: 50px 40px;
+    background: white;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login_head__text {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #a855f7 50%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+}
+
+.login_form__container {
+    width: 100%;
+}
+
+.login_form__containers {
+    margin-bottom: 20px;
+}
+
+.login_form__containers label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.login_form__containers input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.login_form__containers input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.login_form__containers input::placeholder {
+    color: #bbb;
+}
+
+.login_form__btn {
+    margin-top: 30px;
+}
+
+.login_form__btn button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.login_form__btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.login_form__btn button:active {
+    transform: translateY(0);
+}
+
+.login_form__forgot {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login_form__forgot a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.login_form__forgot a:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+.login_form__register {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.login_form__register p {
+    font-size: 14px;
+    color: #666;
+}
+
+.login_form__register a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.login_form__register a:hover {
+    color: #357abd;
+    text-decoration: underline;
+}
+
+/* Tablet (iPad) */
+@media (max-width: 768px) {
+    .login {
+        padding: 40px 20px;
+    }
+
+    .login_container {
+        padding: 40px 30px;
+        margin: 0 20px;
+    }
+
+    .login_head__text {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .login_form__containers input {
+        padding: 10px 12px;
+        font-size: 16px;
+    }
+
+    .login_form__btn button {
+        padding: 11px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .login {
+        padding: 30px 15px;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .login_container {
+        padding: 30px 20px;
+        margin: 20px 0;
+        border-radius: 15px;
+    }
+
+    .login_head__text {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .login_form__containers {
+        margin-bottom: 16px;
+    }
+
+    .login_form__containers label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .login_form__containers input {
+        padding: 10px 12px;
+        font-size: 16px;
+        border-radius: 6px;
+    }
+
+    .login_form__btn {
+        margin-top: 25px;
+    }
+
+    .login_form__btn button {
+        padding: 11px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .login_form__forgot {
+        margin-top: 12px;
+    }
+
+    .login_form__forgot a {
+        font-size: 13px;
+    }
+
+    .login_form__register {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .login_form__register p {
+        font-size: 13px;
+    }
+}
