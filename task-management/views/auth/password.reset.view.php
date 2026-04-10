@@ -2,6 +2,9 @@
 <section class="login">
     <div class="wrapper">
         <div class="login_container">
+            <div class="login-logo">
+                <img src="/images/zendo.png" alt="Zendo Logo" class="login-logo-image">
+            </div>
             <h1 class="login_head__text">Set New Password</h1>
             <div class="login_form__container">
                 <p class="forgot_description">Enter your new password below to reset your account.</p>

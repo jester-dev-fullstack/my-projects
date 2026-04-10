@@ -2,7 +2,11 @@
 <section class="login">
     <div class="wrapper">
         <div class="login_container">
-            <h1 class="login_head__text">Task Management App</h1>
+            <div class="login-logo">
+                <img src="/images/zendo.png" alt="Zendo Logo" class="login-logo-image">
+            </div>
+            <h1 class="login_head__text">Zendo</h1>
+            <p class="login-description">A simple and powerful way to manage your daily tasks.</p>
             <div class="login_form__container">
                 <form action="/register" method="POST">
                     <div class="login_form__containers">
