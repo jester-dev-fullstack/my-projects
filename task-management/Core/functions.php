@@ -1,5 +1,6 @@
 <?php
 
+use Core\Session;
 
 function dd($value)
 {
@@ -31,4 +32,26 @@ function redirect($path)
 {
     header("location: {$path}");
     exit();
+}
+
+function abort($code = 404)
+{
+    http_response_code($code);
+
+    require base_path("views/{$code}.php");
+
+    die();
+}
+
+function login($user)
+{
+    $_SESSION['user'] = [
+        'id' => $user['id'],
+        'email' => $user['email']
+    ];
+}
+
+function logout()
+{
+    Session::destroy();
 }

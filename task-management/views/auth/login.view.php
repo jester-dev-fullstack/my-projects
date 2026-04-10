@@ -1,16 +1,24 @@
+<?php require "../views/layout/header.php"; ?>
 <section class="login">
     <div class="wrapper">
         <div class="login_container">
             <h1 class="login_head__text">Task Management App</h1>
             <div class="login_form__container">
-                <form action="">
+                <form action="/login" method="POST">
                     <div class="login_form__containers">
                         <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Email..." required>
+                        <input type="email" name="email" placeholder="Email..." required <?= isset($errors["email"]) ? 'class="input-error"' : '' ?> value="<?= htmlspecialchars($email ?? '') ?>">
+                        <?php if (isset($errors["email"])) : ?>
+                            <p class="error-message"><?= $errors['email'] ?></p>
+                        <?php endif; ?>
                     </div>
+
                     <div class="login_form__containers">
                         <label for="password">Password</label>
-                        <input type="password" name="password" placeholder="Password..." required>
+                        <input type="password" name="password" placeholder="Password..." required <?= isset($errors["password"]) ? 'class="input-error"' : '' ?>>
+                        <?php if (isset($errors["password"])) : ?>
+                            <p class="error-message"><?= $errors['password'] ?></p>
+                        <?php endif; ?>
                     </div>
 
                     <div class="login_form__btn">
@@ -30,3 +38,4 @@
         </div>
     </div>
 </section>
+<?php require "../views/layout/footer.php"; ?>
