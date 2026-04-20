@@ -2,58 +2,7 @@
 
 <div class="dashboard-container">
     <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <div class="logo">
-                <img src="/images/zendo.png" alt="Zendo Logo" class="logo-image">
-            </div>
-        </div>
-
-        <nav class="sidebar-nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a href="/dashboard" class="nav-link active">
-                        <span class="nav-icon">📊</span>
-                        <span class="nav-label">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/task/create" class="nav-link">
-                        <span class="nav-icon">➕</span>
-                        <span class="nav-label">Add Task</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/tasks" class="nav-link">
-                        <span class="nav-icon">📋</span>
-                        <span class="nav-label">View All Tasks</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/tasks/archived" class="nav-link">
-                        <span class="nav-icon">📦</span>
-                        <span class="nav-label">Archived Tasks</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="sidebar-footer">
-            <div class="footer-buttons">
-                <a href="/profile" class="profile-btn">
-                    <span class="nav-icon">👤</span>
-                    <span class="nav-label">Profile</span>
-                </a>
-            </div>
-            <form action="/logout" method="POST" class="logout-form">
-                <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="logout-btn">
-                    <span class="nav-icon">🚪</span>
-                    <span class="nav-label">Logout</span>
-                </button>
-            </form>
-        </div>
-    </aside>
+    <?php require "../views/inc/sidebar.php"; ?>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -62,15 +11,7 @@
                 <h1 class="dashboard-title">Dashboard</h1>
                 <p class="dashboard-subtitle">Welcome back <?= $_SESSION['user']['first_name']  ?>. Here's your task overview.</p>
             </div>
-            <div class="header-right">
-                <div class="current-time">
-                    <span class="time-icon">🕐</span>
-                    <div class="time-display">
-                        <p class="time-value" id="currentTime">--:-- --</p>
-                        <p class="time-label">Current Time</p>
-                    </div>
-                </div>
-            </div>
+            <?php require "../views/inc/time.php"; ?>
         </div>
 
         <!-- Statistics Cards -->
@@ -79,7 +20,7 @@
                 <div class="stat-icon">⏳</div>
                 <div class="stat-content">
                     <h3 class="stat-label">Pending Tasks</h3>
-                    <p class="stat-number">12</p>
+                    <p class="stat-number"><span id="pending"></span></p>
                 </div>
             </div>
 
@@ -87,7 +28,7 @@
                 <div class="stat-icon">🔄</div>
                 <div class="stat-content">
                     <h3 class="stat-label">In Progress</h3>
-                    <p class="stat-number">5</p>
+                    <p class="stat-number"><span id="in_progress"></span></p>
                 </div>
             </div>
 
@@ -95,7 +36,7 @@
                 <div class="stat-icon">✅</div>
                 <div class="stat-content">
                     <h3 class="stat-label">Completed Tasks</h3>
-                    <p class="stat-number">28</p>
+                    <p class="stat-number"><span id="completed"></span></p>
                 </div>
             </div>
 
@@ -103,7 +44,7 @@
                 <div class="stat-icon">📊</div>
                 <div class="stat-content">
                     <h3 class="stat-label">Total Tasks</h3>
-                    <p class="stat-number">45</p>
+                    <p class="stat-number"><span id="total"></span></p>
                 </div>
             </div>
         </div>
