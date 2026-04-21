@@ -695,6 +695,125 @@ body {
     }
 }
 
+/* BURGER MENU STYLES */
+.burger-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1002;
+    flex-shrink: 0;
+}
+
+.burger-menu-btn span {
+    width: 24px;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.burger-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+    background: black;
+}
+
+.burger-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+    background: black;
+}
+
+@media (max-width: 768px) {
+    .burger-menu-btn {
+        display: flex;
+        margin-right: 15px;
+        position: relative;
+        z-index: 1002;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex: 1;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 280px;
+        z-index: 100;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        flex-direction: column;
+        padding: 30px 20px 20px;
+        box-shadow: 2px 0 20px rgba(0, 0, 0, 0.2);
+        animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+    }
+
+    .sidebar.active {
+        display: flex;
+        position: absolute;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .dashboard-container.menu-active .main-content {
+        margin-left: 0;
+    }
+
+    /* .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    } */
+
+    .sidebar-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .burger-menu-btn span {
+        width: 20px;
+    }
+}
+
 /* ===========================
    404 ERROR PAGE STYLES
    =========================== */
@@ -1222,6 +1341,11 @@ body {
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
+}
+
+.priority-urgent {
+    background-color: #f87171;
+    color: #7f1d1d;
 }
 
 .priority-high {

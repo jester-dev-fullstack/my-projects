@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <div class="logo">
             <img src="/images/zendo.png" alt="Zendo Logo" class="logo-image">
@@ -50,3 +50,5 @@
         </form>
     </div>
 </aside>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>

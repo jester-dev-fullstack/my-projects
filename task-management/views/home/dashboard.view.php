@@ -8,7 +8,12 @@
     <main class="main-content">
         <div class="dashboard-header">
             <div class="header-left">
-                <h1 class="dashboard-title">Dashboard</h1>
+                <button class="burger-menu-btn" id="burgerMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <h1 class="dashboard-title">Overview</h1>
                 <p class="dashboard-subtitle">Welcome back <?= $_SESSION['user']['first_name']  ?>. Here's your task overview.</p>
             </div>
             <?php require "../views/inc/time.php"; ?>
@@ -66,89 +71,8 @@
                 </div>
 
                 <div class="table-body">
-                    <!-- Row 1 -->
-                    <div class="table-row">
-                        <div class="col-task">
-                            <span class="task-name">Design Dashboard UI</span>
-                        </div>
-                        <div class="col-category">
-                            <span class="category-badge">Design</span>
-                        </div>
-                        <div class="col-priority">
-                            <span class="priority-badge priority-high">High</span>
-                        </div>
-                        <div class="col-status">
-                            <span class="status-badge status-in-progress">In Progress</span>
-                        </div>
-                        <div class="col-due">2026-04-15</div>
-                    </div>
-
-                    <!-- Row 2 -->
-                    <div class="table-row">
-                        <div class="col-task">
-                            <span class="task-name">Setup Database</span>
-                        </div>
-                        <div class="col-category">
-                            <span class="category-badge">Backend</span>
-                        </div>
-                        <div class="col-priority">
-                            <span class="priority-badge priority-high">High</span>
-                        </div>
-                        <div class="col-status">
-                            <span class="status-badge status-completed">Completed</span>
-                        </div>
-                        <div class="col-due">2026-04-10</div>
-                    </div>
-
-                    <!-- Row 3 -->
-                    <div class="table-row">
-                        <div class="col-task">
-                            <span class="task-name">API Documentation</span>
-                        </div>
-                        <div class="col-category">
-                            <span class="category-badge">Documentation</span>
-                        </div>
-                        <div class="col-priority">
-                            <span class="priority-badge priority-medium">Medium</span>
-                        </div>
-                        <div class="col-status">
-                            <span class="status-badge status-pending">Pending</span>
-                        </div>
-                        <div class="col-due">2026-04-18</div>
-                    </div>
-
-                    <!-- Row 4 -->
-                    <div class="table-row">
-                        <div class="col-task">
-                            <span class="task-name">Bug Fixes</span>
-                        </div>
-                        <div class="col-category">
-                            <span class="category-badge">Bug Fix</span>
-                        </div>
-                        <div class="col-priority">
-                            <span class="priority-badge priority-high">High</span>
-                        </div>
-                        <div class="col-status">
-                            <span class="status-badge status-in-progress">In Progress</span>
-                        </div>
-                        <div class="col-due">2026-04-12</div>
-                    </div>
-
-                    <!-- Row 5 -->
-                    <div class="table-row">
-                        <div class="col-task">
-                            <span class="task-name">User Testing</span>
-                        </div>
-                        <div class="col-category">
-                            <span class="category-badge">Testing</span>
-                        </div>
-                        <div class="col-priority">
-                            <span class="priority-badge priority-medium">Medium</span>
-                        </div>
-                        <div class="col-status">
-                            <span class="status-badge status-pending">Pending</span>
-                        </div>
-                        <div class="col-due">2026-04-20</div>
+                    <div id="task-list">
+                        <!-- AJAX Implementation Here -->
                     </div>
                 </div>
             </div>

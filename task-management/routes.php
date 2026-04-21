@@ -15,3 +15,4 @@ $router->post('/forgot-password', 'auth/forgot.store.php');
 $router->delete('/logout', 'auth/logout.php');
 
 $router->get('/ajax/stats', 'ajax/stats.php');
+$router->get('/ajax/overview', 'ajax/task-overview.php');

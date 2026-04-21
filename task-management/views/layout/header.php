@@ -14,3 +14,11 @@
 </head>
 
 <body>
+
+    <?php
+    $currentRoute = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    ?>
+
+    <?php if ($currentRoute === '/dashboard'): ?>
+        <script src="/js/helper.js"></script>
+    <?php endif; ?>
